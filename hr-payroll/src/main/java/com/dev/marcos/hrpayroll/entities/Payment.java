@@ -2,10 +2,6 @@ package com.dev.marcos.hrpayroll.entities;
 
 import java.io.Serializable;
 
-/**
- * Classe em memória para armazenar os dados do pagamento
- */
-
 public class Payment implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -13,11 +9,11 @@ public class Payment implements Serializable {
 	private String name;
 	private Double dailyIncome;
 	private Integer days;
-
+	
 	public Payment() {
-		super();
+		
 	}
-
+	
 	public Payment(String name, Double dailyIncome, Integer days) {
 		this.name = name;
 		this.dailyIncome = dailyIncome;
@@ -48,8 +44,8 @@ public class Payment implements Serializable {
 		this.days = days;
 	}
 	
-	public Double getTotal() {
+	public double getTotal() {
 		return days * dailyIncome;
 	}
-	
+
 }

@@ -1,0 +1,8 @@
+
+spring.application.name=hr-eureka-server
+#Default Eureka Server Port
+server.port=8761
+
+#Enable this project for just a server
+eureka.client.register-with-eureka=false
+eureka.client.fetch-registry=false

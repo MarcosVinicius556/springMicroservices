@@ -1,0 +1,19 @@
+package main.java.com.dev.marcos.client.feignclients;
+
+import org.springframework.stereotype.Component;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
+import main.java.com.dev.marcos.client.dto.ProductDTO;
+
+
+@Component
+@FeignClient( 
+    name = "server",
+    path = "/products"
+)
+public interface ProductFeignClient {
+    
+    @GetMapping
+    ResponseEntity<ProductDTO> findProduct();
+
+}

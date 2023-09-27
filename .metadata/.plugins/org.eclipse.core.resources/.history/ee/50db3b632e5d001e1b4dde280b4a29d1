@@ -1,0 +1,4 @@
+
+spring.application.name=hr-eureka-server
+#Default Eureka Server Port
+server.port=8761
