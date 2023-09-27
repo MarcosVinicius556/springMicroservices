@@ -21,7 +21,8 @@ import com.dev.marcos.hrpayroll.entities.Worker;
 @Component //Declarando como um componente gerenciado pelo Spring
 @FeignClient( //Declarando como um client do Feign 
 		name = "hr-worker", //Nome do projeto que iremos consumir
-		url = "localhost:8001", //URL onde iremos buscar as informações
+//		/(Quando se tem mais de uma instancia do MS não deve ser utilizado)
+		//url = "localhost:8001", //URL onde iremos buscar as informações 
 		path = "/workers" // endpoint da busca que iremos utilizar
 		) 
 public interface WorkerFeignClient {
