@@ -42,17 +42,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		<!-- 
-			Para poder rodar um servidor eureka com o Spring é 
-			necessário além do JAX-B, ter também as depêndencias
-			do XStream 
-		-->
-		<dependency>
-		      <groupId>com.thoughtworks.xstream</groupId>
-		      <artifactId>xstream</artifactId>
-		      <version>1.4.19</version>
-		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
