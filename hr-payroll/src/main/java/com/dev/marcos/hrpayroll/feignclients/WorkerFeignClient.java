@@ -10,7 +10,7 @@ import com.dev.marcos.hrpayroll.entities.Worker;
 @FeignClient( name = "hr-worker", path = "/workers" )
 public interface WorkerFeignClient {
 
-	@GetMapping
+	@GetMapping("/{id}")
 	ResponseEntity<Worker> findById(@PathVariable Long id);
 	
 }
