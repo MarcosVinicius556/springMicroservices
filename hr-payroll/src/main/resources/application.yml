@@ -1,0 +1,43 @@
+#Application Name
+spring:
+    application:
+        name: hr-payroll
+    jackson.serialization.indentOutput: true
+
+#Fixed port
+server:
+    port: 8101
+
+#Spring Actuator
+management:
+    endpoints.web.exposure.include: #Expondo todos os endpoints
+        - '*'
+    endpoint.health.show-details: always
+    health.circuitbreakers.enabled: true
+
+#Eureka configuration
+eureka:
+    client:
+        fetch-registry: true
+        registerWithEureka: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka
+
+#Resilience4j CircuitBreaker Configuration
+resilience4j:
+  circuitbreaker:
+    configs:
+        #Config default que será aplicada para todos os circuitBreakers
+        default:
+            registerHealthIndicator: true
+            slidingWindowSize: 10
+            minimumNumberOfCalls: 5
+            permittedNumberOfCallsInHalfOpenState: 3
+            automaticTransitionFromOpenToHalfOpenEnabled: true
+            waitDurationInOpenState: 5s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+    
+      
+
+

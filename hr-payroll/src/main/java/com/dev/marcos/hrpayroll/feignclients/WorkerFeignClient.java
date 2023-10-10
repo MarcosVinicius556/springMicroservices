@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.dev.marcos.hrpayroll.entities.Worker;
 
-@FeignClient( name = "hr-worker", path = "/workers" )
+@FeignClient( name = "hr-worker", path = "/workers")
 public interface WorkerFeignClient {
 
 	@GetMapping("/{id}")
