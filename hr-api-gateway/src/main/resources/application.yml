@@ -1,0 +1,32 @@
+#Configurando rotas da aplicação para o gateway
+spring:
+    application:
+        name: hr-api-gateway
+    cloud:
+        gateway:
+            routes:
+                - id: payments-route
+                  #"lb://" indica que o Spring Cloud Gateway deve
+                  # rotear a solicitação para o serviço por meio
+                  # do balanceador de carga interno.
+                  uri: lb://hr-payroll
+                  predicates:
+                    - Path=/payments/**
+
+                - id: workers-route
+                  uri: lb://hr-worker
+                  predicates:
+                    - Path=/workers/**
+
+
+#Porta default para a aplicação
+server:
+    port: 8765
+
+eureka:
+    client:
+        fetchRegistry: true
+        registerWithEureka: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka
+        
