@@ -6,7 +6,7 @@ spring:
 
 #Fixed port
 server:
-    port: 8101
+    port: ${PORT:0}
 
 #Spring Actuator
 management:
@@ -17,6 +17,9 @@ management:
 
 #Eureka configuration
 eureka:
+    #Porta aleatória para a aplicação
+    instance:
+        instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     client:
         fetch-registry: true
         registerWithEureka: true

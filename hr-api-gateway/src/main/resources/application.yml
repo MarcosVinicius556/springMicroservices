@@ -17,6 +17,9 @@ spring:
                   uri: lb://hr-worker
                   predicates:
                     - Path=/workers/**
+                - id: payment-calc
+                  
+
 
 
 #Porta default para a aplicação
