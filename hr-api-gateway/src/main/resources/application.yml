@@ -4,6 +4,11 @@ spring:
         name: hr-api-gateway
     cloud:
         gateway:
+            #Aqui estamos definindo um timeout geral das rotas
+            #Mas também é possível definir individualmente por rota
+            httpclient:
+                connect-timeout: 10000
+                response-timeout: 5s
             routes:
                 - id: payments-route
                   #"lb://" indica que o Spring Cloud Gateway deve
@@ -17,7 +22,6 @@ spring:
                   uri: lb://hr-worker
                   predicates:
                     - Path=/workers/**
-                - id: payment-calc
                   
 
 
