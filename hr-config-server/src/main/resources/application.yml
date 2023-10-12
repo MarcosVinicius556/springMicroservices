@@ -1,0 +1,15 @@
+
+spring:
+    application:
+        name: hr-config-server1
+    #Definindo a branch default onde será buscado as configurações no guthub 
+    cloud:
+        config:
+            server:
+                git:
+                    default-label: main
+                    uri: https://www.github.com/MarcosVinicius556/ms-config
+
+#Para configurações a porta padrão é 8888
+server:
+    port: 8888

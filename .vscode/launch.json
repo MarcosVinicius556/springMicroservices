@@ -48,6 +48,16 @@
             "projectName": "hr-api-gateway",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrConfigServerApplication<hr-config-server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dev.marcos.hrconfigserver.HrConfigServerApplication",
+            "projectName": "hr-config-server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
