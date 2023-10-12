@@ -1,0 +1,10 @@
+#Arquivo de configuração para se conectar e buscar
+#As configurações centralizadas no servidor de configuração
+spring:
+    application:
+        name: hr-worker
+    cloud:
+        config: #Configurando onde está localizado o servidor de configuração
+            uri: http://localhost:8888
+    profiles: #Definindo o perfil em que a aplicação irá rodar
+        active: test
