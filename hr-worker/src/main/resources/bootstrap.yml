@@ -8,3 +8,12 @@ spring:
             uri: http://localhost:8888
     profiles: #Definindo o perfil em que a aplicação irá rodar
         active: test
+
+
+#Configuração para o actuator permitir que seja 
+#Reatualizado as configurações durante o runtime
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
