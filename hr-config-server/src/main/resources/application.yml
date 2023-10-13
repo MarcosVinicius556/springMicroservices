@@ -9,6 +9,10 @@ spring:
                 git:
                     default-label: main
                     uri: https://www.github.com/MarcosVinicius556/ms-config
+                    #Configurando credenciais para acessar o git
+                    username: ${GITHUB_USER} #Utilizando variáveis de ambiente
+                    #A senha a ser utilizada aqui, deverá ser um token gerado pelo github
+                    password: ${GITHUB_PASS}
 
 #Para configurações a porta padrão é 8888
 server:
