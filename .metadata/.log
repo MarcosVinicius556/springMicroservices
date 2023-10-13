@@ -4538,3 +4538,12 @@ java.lang.NullPointerException
 	at org.springsource.ide.eclipse.commons.livexp.core.LiveVariable.setValue(LiveVariable.java:46)
 	at org.springframework.ide.eclipse.boot.dash.util.AbstractPollingAppReadyStateMonitor$1.run(AbstractPollingAppReadyStateMonitor.java:51)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-13 16:03:45.960
+!MESSAGE Classpath changed for project: hr-oauth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-13 16:03:45.961
+!MESSAGE Boot project ADDED: hr-oauth
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-10-13 16:03:47.463
+!MESSAGE Classpath changed for project: hr-oauth
