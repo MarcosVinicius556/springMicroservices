@@ -26,9 +26,11 @@ spring:
                   uri: lb://hr-worker
                   predicates:
                     - Path=/actuator/**
-
-
-
+                - id: users-route
+                  uri: lb://hr-user
+                  predicates:
+                    - Path=/users/**
+                    
 #Porta default para a aplicação
 server:
     port: 8765
