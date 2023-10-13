@@ -22,10 +22,12 @@ spring:
                   uri: lb://hr-worker
                   predicates:
                     - Path=/workers/**
+                    
                 - id: worker-actuator-route
                   uri: lb://hr-worker
                   predicates:
                     - Path=/actuator/**
+                    
                 - id: users-route
                   uri: lb://hr-user
                   predicates:
