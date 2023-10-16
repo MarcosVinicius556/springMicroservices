@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Cliente\Documents\Projetos\springMicroservices\hr-user"/>
+			<item value="C:\Users\Cliente\Documents\Projetos\springMicroservices\hr-config-server"/>
+			<item value="C:\Users\Cliente\Documents\Projetos\springMicroservices\hr-api-gateway"/>
 			<item value="C:\Users\Cliente\Documents\Projetos\estudosEureka"/>
 			<item value="C:\Users\Cliente\Documents\Projetos\springMicroservices\hr-payroll"/>
 			<item value="C:\Users\Cliente\Documents\Projetos\springMicroservices\hr-worker"/>
