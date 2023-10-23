@@ -2,8 +2,11 @@ spring:
     application:
         name: hr-oauth
 
+
 server:
     port: ${PORT:0}
+    servlet:
+        context-path: /${spring.application.name}
 
 eureka:
     instance:

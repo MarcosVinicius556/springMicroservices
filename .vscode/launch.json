@@ -57,7 +57,8 @@
             "mainClass": "com.dev.marcos.hrconfigserver.HrConfigServerApplication",
             "projectName": "hr-config-server",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53854 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-config-server"
         },
         {
             "type": "java",
@@ -66,6 +67,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.dev.marcos.hroauth.HrOauthApplication",
             "projectName": "hr-oauth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53873 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=hr-oauth"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-HrUserApplication<hr-user>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dev.marcos.hruser.HrUserApplication",
+            "projectName": "hr-user",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
