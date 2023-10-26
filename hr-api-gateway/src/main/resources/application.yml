@@ -36,6 +36,9 @@ spring:
                   uri: lb://hr-oauth
                   predicates:
                     - Path=/**
+                  filters:
+                  - AddRequestHeader=Cookie, Set-Cookie
+                    
                     
 #Porta default para a aplicação
 server:
