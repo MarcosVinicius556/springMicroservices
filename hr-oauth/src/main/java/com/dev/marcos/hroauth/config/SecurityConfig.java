@@ -51,7 +51,8 @@ public class SecurityConfig {
 				   .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
 				   //Configuração das rotas, quais deverão ser livres, quais serão autenticadas
 				   .authorizeHttpRequests(request ->  {
-					request.requestMatchers(HttpMethod.POST, "/hr-oauth/login").permitAll();
+					request.requestMatchers(HttpMethod.POST, "/login").permitAll();
+					request.requestMatchers(HttpMethod.GET, "/users/*").permitAll();
 					request.anyRequest().authenticated();
 				   })
 				   //Filtro que irá pegar nosssa requisição e verificar se está autenticada
