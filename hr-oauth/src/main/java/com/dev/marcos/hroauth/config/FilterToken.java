@@ -36,6 +36,8 @@ public class FilterToken extends OncePerRequestFilter {
             throws ServletException, IOException {
         String token;
 
+        System.out.println("Chegou no filtro de token...");
+
         String authorization = request.getHeader("Authorization"); //Pegamos o cabeçalho da requisição
 
         if(authorization != null){

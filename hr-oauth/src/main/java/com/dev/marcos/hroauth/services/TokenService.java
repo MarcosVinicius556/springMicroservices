@@ -23,6 +23,7 @@ public class TokenService {
      * @return String token de autenticação
      */
     public String generateToken(User usuario){
+        System.out.println("Gerando token para o usuário");
         return JWT.create()
                 .withIssuer(ISSUER)
                 .withSubject(usuario.getEmail())
@@ -38,6 +39,7 @@ public class TokenService {
      * @return String subject
      */
     public String getSubject(String token){
+        System.out.println("Retornornando Subject do usuário...");
         return JWT.require(Algorithm.HMAC256(SECRET_WORD))
                   .withIssuer(ISSUER)
                   .build()

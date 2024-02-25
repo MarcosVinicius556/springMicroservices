@@ -39,9 +39,10 @@ public class SecurityConfig {
      */
 	@Bean
 	AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
-		return config.getAuthenticationManager();
-	}
+        return config.getAuthenticationManager();
+    }
 
+	@Bean
 	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 					//Desabilitando o cors temporariamente....
 		return http.cors(cors -> cors.disable())

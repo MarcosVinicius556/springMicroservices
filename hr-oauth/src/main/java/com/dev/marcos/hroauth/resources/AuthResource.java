@@ -22,15 +22,22 @@ public class AuthResource {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    @PostMapping("/login")
+    @PostMapping( value = "/login" )
     public ResponseEntity<String> login(@RequestBody UserLoginDTO loginDTO) {
         UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(
                         loginDTO.email(), loginDTO.pass());
 
+        System.out.println("Informações de login recebidas...");
+        System.out.println("Login: " + loginDTO.email());
+        System.out.println("Pass: " + loginDTO.pass());
+        
         Authentication authenticate = this.authenticationManager.authenticate(auth);
+
+        System.out.println("Passou pela autenticação");
 
         User user = (User) authenticate.getPrincipal();
 
+        System.out.println("Encontrou o usuário");
         return ResponseEntity.ok().body(tokenService.generateToken(user));
     }
 
